@@ -33,3 +33,8 @@ output "subnet_id" {
   value       = aws_subnet.main.id
   description = "ID of the main subnet"
 }
+
+variable "subnet_id" {
+  type        = string
+  description = "ID of the subnet from networking stack"
+}
