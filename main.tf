@@ -16,7 +16,8 @@ resource "aws_vpc" "main" {
   tags = {
     name    = "Orbit Labs VPC"
     project = "Orbit-labs"
-  }
+    owner   = "Saturnhead"
+    }
 }
 
 resource "aws_subnet" "main" {
