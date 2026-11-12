@@ -1,8 +1,3 @@
-variable "subnet_id" {
-  type        = string
-  description = "ID of the subnet from networking stack"
-}
-
 terraform {
   required_providers {
     aws = {
@@ -37,6 +32,11 @@ resource "aws_subnet" "main" {
 output "subnet_id" {
   value       = aws_subnet.main.id
   description = "ID of the main subnet"
+}
+
+variable "subnet_id" {
+  type        = string
+  description = "ID of the subnet from networking stack"
 }
 
 data "aws_subnet" "selected" {
